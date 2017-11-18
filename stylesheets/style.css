@@ -1,0 +1,159 @@
+@font-face {
+	font-family: 'lakeshore';
+	src: url('../fonts/LAKESHOR-webfont.eot');
+	src: url('../fonts/LAKESHOR-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/LAKESHOR-webfont.woff') format('woff'),
+	url('../fonts/LAKESHOR-webfont.ttf') format('truetype'),
+	url('../fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'airstreamregular';
+	src: url('../fonts/Airstream-webfont.eot');
+	src: url('../fonts/Airstream-webfont.eot?#iefix')
+	format('embedded-opentype'),
+	url('../fonts/Airstream-webfont.woff') format('woff'),
+	url('../fonts/Airstream-webfont.ttf') format('truetype'),
+	url('../fonts/Airstream-webfont.svg#airstreamregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+}
+body {
+	font-size: 20px;
+	background: #8CBEB2;
+	display: flex;
+	flex-direction: column;	
+}
+
+a {
+	text-decoration-line: none;
+}
+
+.logo-text {
+	font-family: lakeshore;
+	color: #F06060;
+	background-color: #F2EBBF;
+	text-align: center;
+	font-size: 37px;
+	text-transform: uppercase;
+}
+
+/* Список фото */
+
+.thumbnail-title {
+	background: #5C4B51;
+	color: #F2EBBF;
+	display: block;
+	padding: 4px 10px;
+	font-size: 18px;
+}
+
+.thumbnail-list {
+	list-style: none;
+	white-space: nowrap;
+	overflow-x: auto;
+	flex: 0 1 auto;
+	justify-content: space-between;
+	order: 2;
+	display: flex;
+}
+
+.thumbnail-item {
+	display: inline-block;
+	min-width: 120px;
+	max-width: 120px;
+	border: 1px solid #F2EBBF;
+	border: 1px solid #F2EBBF;
+}
+
+.thumbnail-image {
+	display: block;
+	width: 100%;
+}
+
+
+.detail-image {
+	width: 90%;
+}
+
+.main-header {
+	flex: 0 1 auto;
+}
+
+.main-content {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.detail-image-container {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.detail-image-frame {
+	text-align: center;
+	position: relative;
+}
+
+.detail-image-title {
+	color: #F2EBBF;
+	font-size: 40px;
+	text-shadow: #5C4B51 1px 2px 10px;
+	font-family: airstreamregular;
+	position: absolute;
+	bottom: -15px;
+	left: 5px;
+}
+
+/* Медиа */
+
+@media print {
+
+}
+
+@media all and (min-width: 768px) {
+	.main-content {
+		overflow: hidden;
+		flex-direction: row;
+	}
+	.thumbnail-list {
+		flex-direction: column;
+		order: 0;
+		margin-left: 20px;
+	}
+	.thumbnail-item {
+		max-width: 260px;
+	}
+	.thumbnail-item + .thumbnail-item {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.thumbnail-list {
+		flex-direction: column;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.main-content {
+		flex-direction: column;
+	}
+	.thumbnail-list {
+		flex-direction: row;
+		order: 2;
+	}
+}
