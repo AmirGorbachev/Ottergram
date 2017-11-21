@@ -74,6 +74,7 @@ a {
 	max-width: 120px;
 	border: 1px solid #F2EBBF;
 	border: 1px solid #F2EBBF;
+	margin: 15px;
 }
 
 .thumbnail-image {
@@ -124,7 +125,7 @@ a {
 
 }
 
-@media all and (min-width: 768px) {
+@media all and (max-width: 768px) {
 	.main-content {
 		overflow: hidden;
 		flex-direction: row;
@@ -141,7 +142,7 @@ a {
 		margin-top: 20px;
 	}
 }
-
+/*
 @media screen and (orientation: landscape) {
 	.thumbnail-list {
 		flex-direction: column;
@@ -156,4 +157,4 @@ a {
 		flex-direction: row;
 		order: 2;
 	}
-}
+}*/
